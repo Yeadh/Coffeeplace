@@ -1086,7 +1086,7 @@ footer .fmm p {
 .widget p, .widget a, .widget li{
 	color:#fff;
 }
-
+.widget #menu-menu-1{padding:0px;}
 .widget p{
 	font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -1102,12 +1102,31 @@ footer .fmm p {
 .widget ul li{
 	list-style:none;
 }
+.widget ul li a {
+padding: 0px!important;
+    color: #fff!important;
+    font-size: 10px!important;
+    padding-right: 10px!important;
+}
 .widget ul li a i{
 	padding: 15px;
 	font-size:14px;
 }
 
-
+.navbar-default {
+    background-color: transparent;
+    border: none;
+}
+.navbar{
+	background: transparent;
+}
+.menu-menu-1-container .menu-item {list-style:none;float: left;}
+.menu-menu-1-container .menu-item a{
+	color: #3b434d;
+	font-size:15px;
+	padding: 5px 10px;
+}
+#navbar .navbar-nav{margin-top:5%;}
 
 
 

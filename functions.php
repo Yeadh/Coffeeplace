@@ -120,7 +120,10 @@ function coffee_the_custom_logo() {
 function coffeeplace_scripts() {
 	wp_enqueue_style( 'bootstrap', 	get_template_directory_uri() . '/css/bootstrap.min.css', array(), '1.0' );
 	wp_enqueue_style( 'font-awesome', 	get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
+	wp_enqueue_style( 'carousel', 	get_template_directory_uri() . '/css/carousel.css', array(), '4.7.0' );
 	wp_enqueue_style( 'coffeeplace-style', get_stylesheet_uri() );
+	
+	wp_enqueue_script('jquery');
 
 	wp_enqueue_script( 'coffeeplace-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );

@@ -20,32 +20,36 @@
 </head>
 
 <body <?php body_class(); ?>>
+    
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'coffeeplace' ); ?></a>
 
 	
 	
+	<div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <?php coffee_the_custom_logo(); ?>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                  <?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    </div> <!-- /container -->
 	
 	
-	<header id="masthead" class="side site-header" role="banner">
-	<div class="h-i">
-		<div class="wrp">
-			<div id="logo">
-			<?php coffee_the_custom_logo(); ?>
-			</div>
-			<div class="m-s">
-				<div class="hsm"></div>
-				<div class="m-si">
-					<nav class="menu-menu-container">
-						<ul id="menu-menu" class="menu">
-							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-						</ul>
-					</nav>  
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
 	
 
 	<div id="content" class="site-content">
