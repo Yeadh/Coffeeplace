@@ -38,6 +38,41 @@ get_header(); ?>
 			<div class="col-md-12">
 			<p class="home_heading">Welcome to Little Coffee Place. Here you can find the best coffee gear reviews and the most practical coffee tips and tricks!</p>
 
+			
+			<?php
+				if ( have_posts() ) :
+
+					if ( is_home() && ! is_front_page() ) : ?>
+						<header>
+							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+						</header>
+
+					<?php
+					endif;
+
+					$home_post = new WP_Query(array(
+						'post_type' => 'post',
+					));
+					/* Start the Loop */
+					while ( $home_post->have_posts() ) : $home_post->the_post();
+
+						/*
+						 * Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'template-parts/content-home');
+
+					endwhile;
+
+					the_posts_navigation();
+
+				else :
+
+					get_template_part( 'template-parts/content', 'none' );
+
+				endif; ?>
+			
 			<div class="col-md-6 home_post">
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header home_post_header">

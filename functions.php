@@ -185,6 +185,14 @@ require get_template_directory() . '/inc/jetpack.php';
 }
 add_action( 'widgets_init', 'coffee_widgets_init' );
 
+
+// Customize Appearance Options
+	function coffee_customize_register( $wp_customize ) {
+		$wp_customize->remove_section('header_image'); 
+		$wp_customize->remove_section('colors');
+		$wp_customize->remove_section('background_image');
+	}
+	add_action('customize_register', 'coffee_customize_register');
 //Footer social options
 function coffee_footer_social_links(){ 
 			  if( coffee_option( 'footer_facebook_link' )  )
