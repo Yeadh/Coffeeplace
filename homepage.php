@@ -38,7 +38,6 @@ get_header(); ?>
 			<div class="col-md-12">
 			<p class="home_heading">Welcome to Little Coffee Place. Here you can find the best coffee gear reviews and the most practical coffee tips and tricks!</p>
 
-			
 			<?php
 				if ( have_posts() ) :
 
