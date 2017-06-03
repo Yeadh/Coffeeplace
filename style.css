@@ -277,8 +277,6 @@ textarea {
 	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
 }
 
 h1,
@@ -360,6 +358,7 @@ html {
 }
 
 body {
+	padding:0px;
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
@@ -1120,7 +1119,7 @@ padding: 0px!important;
 .navbar{
 	background: transparent;
 }
-.menu-menu-1-container .menu-item {list-style:none;float: left;}
+
 .menu-menu-1-container .menu-item a{
 	color: #3b434d;
 	font-size:15px;
@@ -1128,10 +1127,59 @@ padding: 0px!important;
 }
 #navbar .navbar-nav{margin-top:5%;}
 
+.navbar-collapse ul li a{
+	    text-decoration:none;
+}
+.menu-menu-1-container .menu-item a:hover {
+    color: #de8c26;
+}
+.home_post_header h2{
+	text-align: center;
+}
+.header_subscribe_area{
+	    background-size: cover;
+    background-position: 50% 44%;
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 767px) {
+.menu-menu-1-container .menu-item {list-style:none;float: left;}
+}
+@media (max-width: 767px) {
+	.navbar-collapse ul li{
+	    list-style: none;
+    float: none;
+    padding: 10px 0px;
+    background: #fff;
+	}
+.es_lablebox {
+    width: 100%;
+    float: none;
+}
+.es_textbox {
+    width: 100%;
+    float: none;
+}
+
+}
 
 
 
