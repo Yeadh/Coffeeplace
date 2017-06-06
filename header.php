@@ -38,7 +38,22 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <?php coffee_the_custom_logo(); ?>
+            <?php
+            	$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				if ( has_custom_logo() && function_exists( 'the_custom_logo' ) ) {
+				    
+				    	printf('<a href="%s" class="custom-logo-link">', home_url());
+					    the_custom_logo();
+					    printf('</a>');
+				
+				}
+				 else 
+				{
+				    printf('<span class="site-title"><a href="%s">%s</a></span>', home_url(), esc_attr( get_bloginfo( 'name' ) ));
+				}
+				
+			?>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
