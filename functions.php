@@ -126,6 +126,7 @@ function coffeeplace_scripts() {
 	wp_enqueue_script('jquery');
 
 	wp_enqueue_script( 'coffeeplace-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );
 	wp_enqueue_script( 'npm', get_template_directory_uri() . '/js/npm.js', array(), '', true );
 

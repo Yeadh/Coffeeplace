@@ -1,8 +1,8 @@
 /*
 Theme Name: Coffee place
 Theme URI: 
-Author: Yeadh
-Author URI: yeadh.info
+Author: pressionate
+Author URI: 
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -1030,6 +1030,7 @@ footer .fmm p {
 		-o-transition: all 0.9s ease 0s;
 		transition: all 0.9s ease 0s;
 }
+.home_post_header h2 {padding: 0px 20px;}
 .home_post_header h2 a{color:#fff;}
 .home_post{padding: 20px 20px 20px 0;}
 	
